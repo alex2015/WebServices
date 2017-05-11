@@ -1,0 +1,18 @@
+﻿@using WebServices.Models
+
+@model IEnumerable<Reservation>
+@{
+    ViewBag.Title = "Заявки на бронирование";
+}
+
+@section Scripts {
+
+}
+@section Body {
+    <div id="summary" class="section panel panel-primary">
+        @Html.Partial("Summary", Model)
+    </div>
+    <div id="editor" class="section panel panel-primary">
+        @Html.Partial("Editor", new Reservation())
+    </div>
+}
